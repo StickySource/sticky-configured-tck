@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import net.stickycode.configured.defaultkey.AlternativeKeyTest;
 import net.stickycode.configured.finder.BeanFinderTest;
 import net.stickycode.configured.strategy.ConfiguredStrategyTest;
 
@@ -11,6 +12,7 @@ import net.stickycode.configured.strategy.ConfiguredStrategyTest;
   JustPostConfiguredTest.class,
   PrimitiveConfiguratedTest.class,
   BeanFinderTest.class,
+  AlternativeKeyTest.class,
   ConfiguredStrategyTest.class})
 @RunWith(Suite.class)
 public class ConfiguredTck {

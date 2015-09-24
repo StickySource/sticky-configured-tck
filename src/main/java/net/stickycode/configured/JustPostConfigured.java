@@ -3,7 +3,7 @@ package net.stickycode.configured;
 import net.stickycode.stereotype.StickyComponent;
 import net.stickycode.stereotype.configured.PostConfigured;
 
-//@StickyComponent
+@StickyComponent
 public class JustPostConfigured {
 
   private boolean postConfigured = false;
