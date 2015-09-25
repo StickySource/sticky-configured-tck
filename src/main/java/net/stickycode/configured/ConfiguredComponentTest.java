@@ -13,15 +13,16 @@
 package net.stickycode.configured;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
+import org.junit.Test;
+
 import net.stickycode.bootstrap.StickyBootstrap;
 import net.stickycode.stereotype.configured.Configured;
-
-import org.junit.Test;
 
 public class ConfiguredComponentTest {
 
@@ -75,9 +76,9 @@ public class ConfiguredComponentTest {
         .isNotNull();
     assertThat(instance.numbers).containsExactly(1, 5, 3, 7);
 
-    assertThat(configurations).hasSize(1);
+    assertThat(configurations).as(configurations.toString()).hasSize(1);
     Configuration c = configurations.iterator().next();
-    assertThat(c).hasSize(3);
+    assertThat(c).as(c.toString()).hasSize(2);
   }
 
 }
